@@ -1,0 +1,302 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff7f0;
+  padding: 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 45px;
+  margin-block-end: 1rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 32px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.business-intro {
+  text-align: center;
+}
+
+.business-intro > p {
+  padding: 0 29px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  margin-block-end: 32px;
+}
+
+/* Button Styling */
+
+.consultation-btn {
+  font-size: 14px;
+  line-height: 28px;
+
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 8px 28px;
+  color: hsl(0, 100%, 100%);
+  height: 44px;
+  width: 176px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consultation-btn-primary {
+  background-color: hsl(100, 100%, 0%);
+}
+
+.consultation-btn-secondary {
+  background-color: #eb7565;
+}
+
+.consultation-btn-primary:hover,
+.consultation-btn-primary:focus {
+  background-color: #755cde;
+}
+
+.consultation-btn-secondary:hover,
+.consultation-btn-secondary:focus {
+  background-color: #f6a560;
+}
+
+/* -------------------- */
+
+/* Services - Mobile First */
+.services-grid {
+  display: flex;
+  justify-content: center;
+  margin-block-end: 100px;
+}
+
+.services-grid-container {
+  display: flex; /* On Mobile, this shall be flexbox, with the cards using the same */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 343px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 24px;
+  color: white;
+}
+
+.card-xl {
+  height: 364px;
+  flex-basis: 343px;
+}
+
+.card-sm {
+  height: 180px;
+  flex-basis: 159px;
+}
+
+.card-md {
+  height: 158px;
+  flex-basis: 343px;
+}
+
+.card-lg {
+  height: 182px;
+  flex-basis: 343px;
+}
+
+.card-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card-heading > h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.graphic-design {
+  background-color: #755cde;
+  grid-area: graphic;
+}
+
+.ui-ux {
+  background-color: #755cde;
+  grid-area: ui-ux;
+}
+
+.apps {
+  background-color: #f39e9e;
+  grid-area: apps;
+}
+
+.illustrations {
+  background-color: #eb7565;
+  grid-area: illustrations;
+}
+
+.photography {
+  background-color: #61c4b7;
+  grid-area: photo;
+}
+
+.motion-graphics {
+  background-color: #552049;
+  grid-area: motion;
+}
+
+/* -------------------- */
+
+/* Intro */
+
+.intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-block-end: 100px;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.intro-content > a {
+  margin-inline: auto;
+}
+
+.intro > img {
+  width: 300px;
+  height: 300px;
+  margin-block-end: 40px;
+  margin-inline: auto;
+}
+
+/*-----------------------*/
+
+/* My Work */
+
+.my-work {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-block-end: 100px;
+  text-align: center;
+}
+
+.my-work > img {
+  border-radius: 10px;
+}
+
+.mywork-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.mywork-controls > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.mywork-controls > button:hover {
+  background-color: #755cde;
+}
+
+/* --------------------*/
+
+/* Book Appointment */
+
+.book-appointment {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 48px 24px;
+  border-radius: 10px;
+  margin-block-end: 40px;
+}
+
+.book-appointment-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.book-appointment-content > a {
+  margin-inline: auto;
+}
+
+.book-appointment-content > h2 {
+  font-size: 26px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.book-appointment-content > p {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #7a746e;
+}
+/* ---------------------- */
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer > img {
+  width: 40px;
+  height: 40px;
+}
+/* --------------------- */
