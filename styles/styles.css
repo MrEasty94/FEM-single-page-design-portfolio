@@ -95,15 +95,19 @@ header {
 
 /* Services - Mobile First */
 .services-grid {
-  display: flex;
-  justify-content: center;
   margin-block-end: 100px;
 }
 
 .services-grid-container {
-  display: flex; /* On Mobile, this shall be flexbox, with the cards using the same */
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  justify-items: center;
+  margin: 0 auto;
+  grid-template-areas:
+    'graphic graphic'
+    'ui-ux apps'
+    'illustrations illustrations'
+    'photo photo'
+    'motion motion';
   gap: 1rem;
   max-width: 343px;
 }
@@ -119,22 +123,22 @@ header {
 
 .card-xl {
   height: 364px;
-  flex-basis: 343px;
+  width: 343px;
 }
 
 .card-sm {
   height: 180px;
-  flex-basis: 159px;
+  width: 159px;
 }
 
 .card-md {
   height: 158px;
-  flex-basis: 343px;
+  width: 343px;
 }
 
 .card-lg {
   height: 182px;
-  flex-basis: 343px;
+  width: 343px;
 }
 
 .card-img {
@@ -222,32 +226,7 @@ header {
   gap: 24px;
   margin-block-end: 100px;
   text-align: center;
-}
-
-.my-work > img {
-  border-radius: 10px;
-}
-
-.mywork-controls {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.mywork-controls > button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
-}
-
-.mywork-controls > button:hover {
-  background-color: #755cde;
+  overflow: hidden;
 }
 
 /* --------------------*/
@@ -260,7 +239,8 @@ header {
   text-align: center;
   padding: 48px 24px;
   border-radius: 10px;
-  margin-block-end: 40px;
+  width: 90vw;
+  margin: 0 auto 40px;
 }
 
 .book-appointment-content {
@@ -300,3 +280,75 @@ footer > img {
   height: 40px;
 }
 /* --------------------- */
+
+@media only screen and (min-width: 740px) {
+  .services-grid-container {
+    grid-template-areas:
+      'graphic graphic ui-ux apps'
+      'graphic graphic illustrations illustrations'
+      'photo photo motion motion';
+    gap: 1.5rem;
+    max-width: 691px;
+  }
+
+  .card-xl {
+    height: 364px;
+    width: 333px;
+  }
+
+  .card-sm {
+    height: 180px;
+    width: 155px;
+  }
+
+  .card-md {
+    height: 158px;
+    width: 333px;
+  }
+
+  .card-lg {
+    height: 182px;
+    width: 333px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .book-appointment {
+    width: 80vw;
+  }
+
+  .services-grid-container {
+    grid-template-areas:
+      'graphic graphic ui-ux apps photo photo'
+      'graphic graphic illustrations illustrations motion motion';
+    gap: 1.5rem;
+    max-width: 1108px;
+  }
+
+  .card-xl {
+    height: 364px;
+    width: 354px;
+  }
+
+  .card-sm {
+    height: 182px;
+    width: 164px;
+  }
+
+  .card-md {
+    height: 158px;
+    width: 354px;
+  }
+
+  .card-lg {
+    height: 182px;
+    width: 354px;
+  }
+
+  .motion-graphics {
+    background-color: #552049;
+    grid-area: motion;
+    height: 158px;
+    width: 354px;
+  }
+}
